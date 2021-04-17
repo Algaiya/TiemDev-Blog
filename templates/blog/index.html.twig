@@ -3,18 +3,36 @@
 {% block title %}Salut BlogController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/FiercePC/Documents/DEV/BLOG-TP/src/Controller/BlogController.php'|file_link(0) }}">src/Controller/BlogController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/FiercePC/Documents/DEV/BLOG-TP/templates/blog/index.html.twig'|file_link(0) }}">templates/blog/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="articles">
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 17/04/2021 à 19:00 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="https://place-hold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, optio. Voluptatum et id ad commodi.</p>
+                <p>Cumque dicta nihil, similique illum fuga blanditiis libero repellat, corrupti cupiditate consectetur, rem molestias dolorem.</p>
+                <a href="" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 17/04/2021 à 19:00 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="https://place-hold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eligendi aperiam delectus non, officia in.</p>
+                <p>Consequatur incidunt autem doloremque tempore soluta error recusandae dolorem temporibus voluptates enim. Ipsam, soluta consectetur!</p>
+                <a href="https://place-hold.it/350x150" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 17/04/2021 à 19:00 dans la catégorie Politique</div>
+            <div class="content">
+                <img src="https://place-hold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis cumque pariatur fugiat doloremque sint nihil.</p>
+                <p>Eligendi accusamus, consequatur culpa amet blanditiis earum nemo, delectus sint, placeat nihil maiores sed eius!</p>
+                <a href="" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+    </section>
 {% endblock %}
