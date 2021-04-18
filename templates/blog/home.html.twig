@@ -1,8 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Bienvenue dans ce blog</h1>
+{% block stylesheets %}
+    <link rel="stylesheet" href=" {{ asset('assets/css/home_twig.css') }} ">
+{% endblock %}
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos similique, corporis provident neque eum iusto suscipit, et exercitationem nam vitae est eaque repellendus perspiciatis. Consectetur ducimus hic, perferendis cupiditate eum nesciunt ad, voluptatem quo libero totam iste atque aperiam sequi!</p>
-    <p>Architecto, animi natus atque, qui ut commodi consequuntur consectetur quasi, excepturi fugiat dolorem. Velit amet nemo maxime numquam sed unde soluta est facere qui dicta impedit totam itaque quo aspernatur illo optio tenetur repellendus, blanditiis ut in! Assumenda, asperiores nesciunt?</p>
+{% block body %}
+    <h1>Bienvenue chez Tiemoko's Blog</h1>
+
+    <p>Dans ce blog, développé par Tiemoko Diallo, vous aurez la possibilité de visionner différents types d'articles référencés par catégorie.</p>
+    <p>Vous aurez également la possibilité de créez vous-mêmes vos articles afin de pouvoir les publier sur le blog.</p>
+    <p>Je vous invites à vous référer à la liste suivante qui comprend les différentes catégories présentes sur le site.</p> 
+    <p>En cliquant sur celle vous intéressant, vous vous rendrez sur une page qui vous affichera les articles étant en lien avec la catégorie sélectionnée.</p>
+
+    <h2>Liste des catégories d'articles</h2>
+    <ul class="categories_list">
+       <a href="{{ path('blog_animals') }}"><li>Animaux</li></a>
+       <a href="{{ path('blog_kid') }}"><li>Enfant</li></a>
+       <a href="{{ path('blog_decoration') }}"><li>Décoration</li></a>
+    </ul>
 {% endblock %}

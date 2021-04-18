@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/show_twig.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="link">
+        <a href=" {{ path("blog") }} ">Retournez vers la liste des articles</a>
+    </div>
+    <article>
+        <h2>{{ article.title }}</h2>
+        <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y')}} à {{ article.createdAt | date('H:i') }} dans la catégorie {{ article.category }}</div>
+            <div class="content">
+                <img src="{{ article.image }}" alt="">
+            </div>
+            <div class="content">
+                {{ article.content | raw }}
+            </div>
+     </article>
+{% endblock %}
