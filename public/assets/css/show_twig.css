@@ -2,15 +2,24 @@
 APPLICATION CSS SUR LES ARTICLES AFFICHÉS
 -----------------------------------------*/
 .link {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     font-size: 20px;
     padding: 1%;
+    height: 95px;
+}
+
+.edits a {
+    padding: 25px;
 }
 
 article {
     text-align: center;
     margin-top: 5%;
 }
+
 
 .content {
     margin-top: 5%;

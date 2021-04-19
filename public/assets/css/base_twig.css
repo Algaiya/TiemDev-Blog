@@ -1,6 +1,9 @@
 /*--------------------------------------
 APPLICATION CSS SUR LA PAGE BASE DU BLOG
 --------------------------------------*/
+h1 {
+    text-align: center;
+}
 
 img {
     max-width: 550px;

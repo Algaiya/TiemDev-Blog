@@ -12,9 +12,10 @@ h2 {
 .categories_list {
     text-align: center;
     margin: 0 auto;
-    width: 15%;
+    width: 25%;
 }
 
 .categories_list li {
     list-style: none;
+    padding: 5%;
 }

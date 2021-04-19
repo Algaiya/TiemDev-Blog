@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ * @UniqueEntity("title")
  */
 class Article
 {
@@ -19,6 +22,7 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=10, max=255)
      */
     private $title;
 
@@ -29,6 +33,7 @@ class Article
 
     /**
      * @ORM\Column(type="text")
+     *  @Assert\Length(min=10, max=255)
      */
     private $content;
 
