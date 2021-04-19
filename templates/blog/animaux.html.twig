@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tiemoko's Blog - Articles (Animaux){% endblock %}
+
+
+{% block body %}
+    <h1>Catégorie d'article: Animaux</h1>
+    <hr>
+    <section class="articles">
+        {% for article in articles %}
+            <article>
+                <h2>{{ article.title }}</h2>
+                <p class="category">Catégorie: {{ article.category }}</p>
+                <img src="{{ article.image }}" alt="image de l'article.">
+                <br><br>
+                <a href="{{ path('blog_show', {'id': article.id} ) }}" class="btn btn-primary">Lire l'article</a>
+            </article>
+            <hr>
+        {% endfor %}
+    </section>
+{% endblock %}

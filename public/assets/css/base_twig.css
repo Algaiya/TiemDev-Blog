@@ -2,7 +2,9 @@
 APPLICATION CSS SUR LA PAGE BASE DU BLOG
 --------------------------------------*/
 h1 {
+    color: #2C3E50;
     text-align: center;
+    margin: 2% auto;
 }
 
 img {

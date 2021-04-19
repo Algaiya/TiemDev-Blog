@@ -70,17 +70,33 @@ class BlogController extends AbstractController
             return $this->redirectToRoute('blog_show', ['id' => $article->getid()]);
         }
 
-        return $this->render('blog/create.html.twig', [
+        return $this->render('blog/form.html.twig', [
             'formArticle' => $form->createView(),
             'editMode' => $article->getId() !== null,
         ]);
     }
 
     /**
+     * @Route("/blog/article{id}/delete", name="blog_delete", requirements={"id":"\d+"})
+     */
+    public function delete(Article $article, EntityManagerInterface $entityManager) {
+        $entityManager->remove($article);
+        $entityManager->flush();
+    
+        return $this->redirectToRoute('blog');
+    }
+
+    /**
      * @Route("/blog/animaux", name="blog_animals")
      */
-    public function animaux() {
-        return $this->render('blog/animaux.html.twig');
+    public function animaux(string $animaux, ArticleRepository $repo) {
+        $articles = $repo
+            ->find($animaux);
+
+        return $this->render('blog/animaux.html.twig', [
+            'controller_name' => 'BlogController',
+            'articles' => $animaux
+        ]);
     }
 
     /**

@@ -22,7 +22,7 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min=10, max=255)
+     * @Assert\Length(min=10, max=255, minMessage="Votre titre est trop court, il doit contenir 10 caractères au minimum.")
      */
     private $title;
 
@@ -33,7 +33,7 @@ class Article
 
     /**
      * @ORM\Column(type="text")
-     *  @Assert\Length(min=10, max=255)
+     *  @Assert\Length(min=10, minMessage="Votre contenu est trop court, il doit contenir 10 caractères au minimum.")
      */
     private $content;
 
