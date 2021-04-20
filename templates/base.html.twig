@@ -20,7 +20,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto p-2">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('home') }}">Accueil</a>
                     </li>
@@ -29,8 +29,24 @@
                         <span class="sr-only">(current)</span>
                         </a>
                     </li>
+                    {% if app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog_create') }}">Créez un article</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                <ul class="navbar-nav p-2">
+                    {% if app.user %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('blog_create') }}">Créez un article</a>
+                        <a class="nav-link" href="{{ path('blog_logout') }}">Déconnexion</a>
+                    </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog_login') }}">Connexion</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('blog_register') }}">Créez un compte</a>
                     </li>
                 </ul>
             </div>

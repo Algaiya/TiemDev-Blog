@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tiemoko's Blog - Compte Crée{% endblock %}
+
+{% block body %}
+    <h1>Validation du compte</h1>
+    <hr>
+    <div class="text-validation">
+        <p>Votre compte à bien été crée.</p>
+        <p>D'ici quelques instants, vous recevrez un mail de confirmation afin de valider la création de votre compte.</p>
+        <p>Merci de votre confiance et bonne visite sur Tiemoko's Blog.</p>
+    </div>
+    <div class="link link-validation">
+        <a href=" {{ path("home") }} ">Retournez vers l'accueil du site</a>
+        <a href=" {{ path("blog_login") }} ">Se connectez</a>
+        <a href=" {{ path("blog") }} ">Se rendre à la liste des Articles</a>
+    </div>
+    <hr>
+{% endblock %}

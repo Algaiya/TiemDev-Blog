@@ -16,3 +16,19 @@ img {
 .category {
     font-size: 24px;
 }
+
+.validate-btn {
+    color: white;
+    background-color: #149A80;
+}
+
+.text-validation {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.link-validation {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
