@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tiemoko's Blog{% endblock %}
+{% block title %}TiemDev's Blog{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/css/show_twig.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('assets/css/home_twig.css') }}"> #}
 {% endblock %}
 
 {% block javascripts %}
@@ -13,10 +14,12 @@
 {% block body %}
     <div class="link">
         <a href=" {{ path("blog") }} "><i class="fas fa-arrow-circle-left"></i> Retournez vers la liste des articles</a>
-        <div class="edits">
-            <a href="{{ path('blog_edit', {id: article.id}) }}"><i class="fas fa-pencil-alt"></i></a>
-            <a href="{{ path('blog_delete', {id: article.id}) }}"><i class="fas fa-trash-alt"></i></a>
-        </div>
+        {% if app.user %}
+            <div class="edits">
+                <a href="{{ path('blog_edit', {id: article.id}) }}"><i class="fas fa-pencil-alt"></i></a>
+                <a href="{{ path('blog_delete', {id: article.id}) }}"><i class="fas fa-trash-alt"></i></a>
+            </div>
+        {% endif %}
     </div>
     <article>
         <h2>{{ article.title }}</h2>

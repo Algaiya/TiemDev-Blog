@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tiemoko's Blog - Compte Crée{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/home_twig.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+{% endblock %}
+
+{% block title %}TiemDev's Blog - Compte Crée{% endblock %}
 
 {% block body %}
     <h1>Validation du compte</h1>
@@ -8,12 +16,11 @@
     <div class="text-validation">
         <p>Votre compte à bien été crée.</p>
         <p>D'ici quelques instants, vous recevrez un mail de confirmation afin de valider la création de votre compte.</p>
-        <p>Merci de votre confiance et bonne visite sur Tiemoko's Blog.</p>
+        <p>Merci de votre confiance et bonne visite sur TiemDev's Blog.</p>
     </div>
     <div class="link link-validation">
-        <a href=" {{ path("home") }} ">Retournez vers l'accueil du site</a>
-        <a href=" {{ path("blog_login") }} ">Se connectez</a>
-        <a href=" {{ path("blog") }} ">Se rendre à la liste des Articles</a>
+        <a href=" {{ path("home") }} "><i class="fas fa-arrow-circle-left"></i>Retournez vers l'accueil du site</a>
+        <a href=" {{ path("blog_login") }} "><i class="fas fa-arrow-circle-left"></i>Se connectez</a>
+        <a href=" {{ path("blog") }} "><i class="fas fa-arrow-circle-left"></i>Se rendre à la liste des Articles</a>
     </div>
-    <hr>
 {% endblock %}

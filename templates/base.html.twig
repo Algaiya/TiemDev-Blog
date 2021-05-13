@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Tiemoko's Blog{% endblock %}</title>
+        <title>{% block title %}TiemDev's Blog{% endblock %}</title>
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('assets/css/base_twig.css') }}">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="{{ path('home') }}">Tiemoko's Blog</a>
+            <a class="navbar-brand" href="{{ path('home') }}">TiemDev's Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,10 +44,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('blog_login') }}">Connexion</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog_register') }}">Créez un compte</a>
+                        </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('blog_register') }}">Créez un compte</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -56,5 +56,8 @@
 
         {% endblock %}
         </div>
+        <footer class="foot-side">
+            <p>&copy Designed and created by TiemDev</p>
+        </footer>
     </body>
 </html>

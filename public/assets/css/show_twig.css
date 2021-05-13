@@ -28,3 +28,17 @@ article {
     justify-content: center;
     align-items: center;
 }
+
+/*===========
+PARTIE FOOTER
+============*/
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #2C3E50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

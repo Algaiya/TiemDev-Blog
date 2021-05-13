@@ -5,18 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Bienvenue chez Tiemoko's Blog</h1>
+    <h1>Bienvenue chez TiemDev's Blog</h1><br>
 
-    <p>Dans ce blog, développé par Tiemoko Diallo, vous aurez la possibilité de visionner différents types d'articles référencés par catégorie.</p>
-    <p>Vous aurez également la possibilité de créez vous-mêmes vos articles afin de pouvoir les publier sur le blog.</p>
-    <p>Je vous invites à vous référer à la liste suivante qui comprend les différentes catégories présentes sur le site.</p> 
-    <p>En cliquant sur celle vous intéressant, vous vous rendrez sur une page qui vous affichera les articles étant en lien avec la catégorie sélectionnée.</p>
-
-    <h2>Liste des catégories d'articles</h2>
-    <ul class="categories_list">
-       <a href="{{ path('blog') }}"><li>Tout les articles</li></a>
-       <a href="{{ path('blog_animals') }}"><li>Animaux</li></a>
-       <a href="{{ path('blog_kid') }}"><li>Enfant</li></a>
-       <a href="{{ path('blog_decoration') }}"><li>Décoration</li></a>
-    </ul>
+    <p>Dans ce blog, développé par TiemDev, vous aurez la possibilité de visionner différents types d'articles référencés par catégorie.</p>
+    <p>Vous aurez également la possibilité de créez vous-même vos articles afin de pouvoir les publier sur le blog en créant, au préalable, votre compte d'utilisateur via le formulaire prévu à cet effet.</p>
+    <p>Je vous invites à cliquer sur le lien présent plus bas afin d'être rediriger vers la page qui comprend les différents articles présents sur le site.</p><br> 
+    <p>En vous souhaitant une agréable visite sur le site de TiemDev's Blog.</p>
+    <p><a href="{{ path('blog') }}">Page des articles</a></p>
 {% endblock %}

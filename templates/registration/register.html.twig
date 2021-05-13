@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tiemoko's Blog - Inscription{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/home_twig.css') }}">
+{% endblock %}
+
+{% block title %}TiemDev's Blog - Inscription{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}
